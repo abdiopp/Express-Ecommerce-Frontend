@@ -101,16 +101,22 @@ const AdminOrders = () => {
                         <div className="col-md-4">
                           <img
                             src={`https://frail-coat-colt.cyclic.app/api/v1/product/product-photo/${p._id}`}
-                            className="card-img-top"
+                            className="card-img-top img-thumbnail"
                             alt={p.name}
                             width="100px"
-                            height={"100px"}
+                            height="100px"
                           />
                         </div>
-                        <div className="col-md-8">
-                          <p>{p.name}</p>
-                          <p>{p.description.substring(0, 30)}</p>
-                          <p>Price: {p.price}</p>
+                        <div className="col-md-8 flex-column d-flex justify-content-center align-items-center">
+                          <p className="fw-bold text-capitalize fs-3">
+                            {p.name}
+                          </p>
+                          <p className="text-capitalize">
+                            {p.description.substring(0, 30)}
+                          </p>
+                          <p>
+                            <span className="fw-bold">Price:</span> {p.price}
+                          </p>
                         </div>
                       </div>
                     ))}
